@@ -1,0 +1,4 @@
+# fcp
+ CLI, a significantly faster alternative to the classic Unix cp(1) command, copying large files and directories in a fraction of the time.
+# SCREENSHOTS: /contribute_ss.png /contribute_ss.png
+# SITES: https://github.com/Svetlitski/fcp

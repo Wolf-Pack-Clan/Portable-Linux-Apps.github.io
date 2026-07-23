@@ -1,0 +1,4 @@
+# modemu2k
+ A Hayes AT-command modem emulator that bridges a serial interface to TCP/Telnet.
+# SCREENSHOTS: /contribute_ss.png /contribute_ss.png
+# SITES: https://github.com/theimpossibleastronaut/modemu2k

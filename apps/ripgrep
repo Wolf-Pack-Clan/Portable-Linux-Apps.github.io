@@ -1,0 +1,4 @@
+# ripgrep
+ Search directories for regex pattern while respecting gitignore.
+# SCREENSHOTS: /contribute_ss.png /contribute_ss.png
+# SITES: https://github.com/BurntSushi/ripgrep
