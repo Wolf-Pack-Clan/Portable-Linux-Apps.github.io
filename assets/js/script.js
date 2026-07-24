@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', function() {
           clearTimeout(timer);
           var self = this;
           timer = setTimeout(function() {
-            var q = self.value.toLowerCase();
+            var terms = self.value.toLowerCase().split(/\s+/).filter(Boolean);
             for (var k = 0; k < appNodes.length; k++) {
-              var show = !q || cache[k].name.indexOf(q) !== -1 || cache[k].desc.indexOf(q) !== -1;
+              var show = !terms.length || terms.every(function(t) { return cache[k].name.indexOf(t) !== -1 || cache[k].desc.indexOf(t) !== -1; });
               appNodes[k].style.display = show ? '' : 'none';
             }
           }, 150);
