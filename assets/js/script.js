@@ -40,13 +40,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var input = document.getElementById('search-input');
   if (input) {
+    var timer;
     input.addEventListener('input', function() {
-      var q = this.value.toLowerCase();
-      if (!q) { renderApps(allApps); return; }
-      renderApps(allApps.filter(function(a) {
-        return a.name.toLowerCase().indexOf(q) !== -1 ||
-               (a.description && a.description.toLowerCase().indexOf(q) !== -1);
-      }));
+      clearTimeout(timer);
+      var self = this;
+      timer = setTimeout(function() {
+        var q = self.value.toLowerCase();
+        if (!q) { renderApps(allApps); return; }
+        renderApps(allApps.filter(function(a) {
+          return a.name.toLowerCase().indexOf(q) !== -1 ||
+                 (a.description && a.description.toLowerCase().indexOf(q) !== -1);
+        }));
+      }, 150);
     });
   }
 
